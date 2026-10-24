@@ -5,6 +5,9 @@
 
 
 
+
+
+
 // //variables   var keyword 
 // var name11 = "John";
 // var age = 30;
@@ -12,9 +15,15 @@
 
 
 
+
+
+
 // var x = 5;
 // var x = 10;
 // console.log(x); //output: 10
+
+
+
 
 
 
@@ -26,9 +35,14 @@
 
 
 
+
+
 // const x = 5;
 // const x = 10;
 // console.log(x); //Cannot redeclare block-scoped variable 'x'
+
+
+
 
 
 
@@ -45,11 +59,18 @@
 
 
 
-// let keyword
 
+
+
+
+// let keyword
 // let name1 = "John";
 // let marks = 85;
 // console.log("name is: ", name1 + " and marks is", marks)
+
+
+
+
 
 
 
@@ -57,6 +78,11 @@
 // let a = 10;
 // let a = 90;
 // console.log(a)
+
+
+
+
+
 
 
 // function display() {
@@ -69,6 +95,11 @@
 // display()
 
 
+
+
+
+
+
 // function display() {
 //     let message = "hellow"
 //     if (true) {
@@ -77,6 +108,10 @@
 //     }
 // }
 // display()
+
+
+
+
 
 
 
@@ -94,6 +129,10 @@
 
 
 
+
+
+
+
 // //const keyword
 
 // const name1 = "John";
@@ -101,9 +140,18 @@
 
 
 
+
+
+
+
 // const name1 = "John";
 // const name1 = "Doe";
 // console.log("name is: ", name1) //Cannot redeclare block-scoped variable 'name1'.
+
+
+
+
+
 
 
 
@@ -118,8 +166,11 @@
 
 
 
+
+
+
+
 // function display() {
-   
 //     if (true) {
 //         const name1 = "John";
 //         console.log("name is " , name1)
@@ -131,7 +182,6 @@
 
 
 // function display() {
-   
 //     if (true) {
 //         const name1 = "John";
 //     }
@@ -149,8 +199,14 @@
 
 
 
+
+
+
 // let name2 = "John";
 // name2 = "Doe"; // This is allowed because name2 is declared with let
+
+
+
 
 
 // var name3 = "John";
@@ -160,8 +216,11 @@
 
 
 
+
 // var x;
 // console.log(x) // output : undefined
+
+
 
 
 
@@ -170,13 +229,16 @@
 
 
 
+
+
 // const x
 // console.log(x) //'const' declarations must be initialized.
 
 
 
-// //another concept
 
+
+// //another concept
 // var student = {
 //     name1 : 'bhavna',
 //     roll : 78
@@ -184,6 +246,8 @@
 // student.name1 = "shikha"
 // console.log(student.name1)
 // console.log(student.roll)
+
+
 
 
 
@@ -193,10 +257,12 @@
 //     name1 : 'bhavna',
 //     roll : 78
 // }
-
 // student.name1 = "shikha"
 // console.log(student.name1)
 // console.log(student.roll)
+
+
+
 
 
 
@@ -205,7 +271,6 @@
 //     name1 : 'bhavna',
 //     roll : 78
 // }
-
 // student = {
 //     roll : 100
 // }
@@ -216,11 +281,12 @@
 
 
 
+
+
 // const student = {
 //     name1 : 'bhavna',
 //     roll : 78
 // }
-
 // student = {
 //     roll : 100
 // }
@@ -245,6 +311,12 @@
 
 
 
+
+
+
+
+
+
 // let student = {
 //     name1 : 'bhavna',
 //     roll : 78
@@ -257,15 +329,27 @@
 
 
 
+
+
+
+
 // const number = [10, 20, 30, 40]
 // number = [60, 70, 80]
 // console.log(number)    //TypeError: Assignment to constant variable.
 
 
 
+
+
+
+
 // const number = [10, 20, 30, 40]
 // number.push(90)
 // console.log(number)    // [ 10, 20, 30, 40, 90 ]
+
+
+
+
 
 
 
@@ -276,11 +360,17 @@
 
 
 
-// //Hoisting 
 
+
+
+// //Hoisting 
 // console.log(a) //undefined
 // var a = 10
 // console.log(a) // 10
+
+
+
+
 
 
 
@@ -291,9 +381,203 @@
 
 
 
+
+
+
+
 // console.log(a) //ReferenceError: Cannot access 'a' before initialization
 // const a = 10
 // console.log(a)
+
+
+
+
+
+
+
+// TDZ    ReferenceError: Cannot access 'a' before initialization
+//console.log(a)
+//const a = 10
+
+
+
+
+
+
+
+// variables in js
+//let a$ = 10
+//console.log(a$)
+//let _age = 10
+//console.log(_age)
+
+
+
+
+
+//let first name = "abc"
+//let #age = 20
+
+
+
+
+
+
+//let $price = 899
+//console.log($price)
+
+
+
+
+
+
+
+//let a = 10
+//let b = 9
+//console.log(a)//10
+//console.log(b)//10
+//b = 90
+//console.log(a)//10
+//console.log(b)//899
+
+
+
+
+
+
+
+
+//let student1 = {name: "deepika"}
+//let student2 = student1
+//console.log(student1) 
+//console.log(student1.name)
+//console.log(student2.name)
+//student2.name = "virat"
+//console.log(student1.name)
+//console.log(student2.name)
+
+//{ name: 'deepika' }
+//deepika
+//deepika
+//virat
+//virat
+
+
+
+
+
+
+
+
+//let age = 25
+//let salary = 2345.3666
+//let temp = -67
+//console.log(age)
+//console.log(salary)
+//console.log(temp)
+//console.log(2e3)
+//console.log(0b1010)
+//console.log(0o17)
+//console.log(0xff)
+//console.log(typeof age)
+//console.log(typeof 0xff)
+
+
+
+
+
+
+//let result = 'hello'/2;     
+//console.log(result)           //NaN
+//console.log(typeof result)    //number
+//console.log(1/0)              //Infinity
+//console.log(-1/0)             //-Infinity
+//console.log(typeof Infinity)    //number
+
+
+
+
+
+
+//x = "hello" * 5
+//console.log(x)                 //NaN
+//console.log(Number.isNaN(x))   //true
+
+
+
+
+
+//x = Number("10")
+//console.log(x*x)     //100
+
+
+
+
+//x = Number("abc")
+//console.log(x)       //NaN
+
+
+
+
+
+
+//console.log(Number(""))       //0
+//console.log(0/0)              //NaN
+//console.log(Math.sqrt(25))    //5
+//console.log(Math.sqrt(-1))    //NaN
+
+
+
+
+
+//console.log(NaN = NaN)      // NaN
+//console.log(NaN == NaN)     // false
+//console.log(NaN === NaN)    // false
+
+
+
+
+
+//x = 'hello'*5
+//y = 'welcome'/5
+//console.log(Number.isNaN(x) == Number.isNaN(y)) // ture
+
+
+
+
+
+
+
+
+//console.log(Number.isNaN("abc"))         //false
+//console.log(Number.isNaN("NaN"))             //true
+//console.log(Number.isNaN(Number("abc")))        //true
+
+
+
+
+
+
+
+
+//let result = Number("abc")
+//console.log(result + 10)      //NaN
+//console.log(result * 10)     //NaN
+//console.log(result - 10)     //NaN
+
+
+
+
+console.log(Number.MAX_SAFE_INTEGER)
+console.log(Number.MIN_SAFE_INTEGER)
+console.log(Number.isInteger(25))
+
+
+
+
+
+
+
 
 
 
