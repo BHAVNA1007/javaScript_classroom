@@ -161,5 +161,34 @@ console.log(xx[10])
 
 
 
-let xxx = [10, "deepika", "indore", 2.5]
+let xxx = [10, "deepika", "indore", 20.5, null, undefined]
 console.log(xxx)
+
+
+
+
+
+
+let xxx1 = [10, "deepika", "indore", 20.5, null, undefined]
+console.log(xxx1[-1])
+
+
+
+
+let students = [101, 'deepika', [89, 97, 66], {city: 'indore'}]
+console.log(students)
+console.log(students[2][0])
+console.log(students[3].city)
+console.log(students.length)
+console.log(students[students.length-1])
+
+
+
+
+
+
+
+let xxxx = [10, 20]
+xxxx[5] = 60
+console.log(xxxx) //[ 10, 20, <3 empty items>, 60 ]
+console.log(xxxx[3]) //undefined
