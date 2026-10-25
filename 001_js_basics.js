@@ -103,7 +103,7 @@
 // function display() {
 //     let message = "hellow"
 //     if (true) {
-        
+
 //         console.log(message); 
 //     }
 // }
@@ -119,7 +119,7 @@
 // function display() {
 //     let message = "hellow"
 //     if (true) {
-        
+
 //         console.log(message); 
 //         let x = 10
 //     }
@@ -191,7 +191,7 @@
 
 
 
- 
+
 
 
 // const name1 = "John";
@@ -568,9 +568,276 @@
 
 
 
-console.log(Number.MAX_SAFE_INTEGER)
-console.log(Number.MIN_SAFE_INTEGER)
-console.log(Number.isInteger(25))
+
+
+
+
+//console.log(Number.MAX_SAFE_INTEGER)
+//console.log(Number.MIN_SAFE_INTEGER)
+//console.log(Number.isInteger(25))
+//console.log(Number.isFinite(100))
+//console.log(Number.isFinite(Infinity))
+//console.log(Number.isSafeInteger(25))
+//
+//9007199254740991
+//-9007199254740991
+//true
+//true
+//true
+//false
+//true
+
+
+
+
+
+
+
+
+
+//let name1 = "abc"
+//let address = "indore"
+//console.log(name1)        
+//console.log(address)
+//let age = 20
+//let message = `Name is ${name1} and address is ${address} and age is ${age}`
+//console.log(message)
+//
+//abc
+//indore
+//Name is abc and address is indore and age is 20
+
+
+
+
+
+
+
+
+//a = 10
+//b = 20
+//console.log(`sum is ${a+b}`)
+//console.log(`hyy kaise ho
+//    party krenge`)
+//
+//sum is 30
+//hyy kaise ho
+//    party krenge    
+
+
+
+
+
+
+
+//let message = `hyy \"guys" `
+//console.log(message)
+
+
+
+
+
+
+//let  m = "welcome";
+//console.log(m[0])
+//console.log(m[1])
+//console.log(m[2])
+//console.log(m[10])
+//console.log(m[-1])
+//console.log(m.charAt(0))
+//console.log(m.length-1)
+//console.log(m[m.length-1])
+//console.log(m.at(-1))
+//w
+//e
+//l
+//undefined
+//undefined
+//w
+//6
+//e
+//e
+
+
+
+
+
+
+
+//let m = "hello";
+//console.log(m)
+//m[0] = 'y'
+//console.log(m)
+//
+//hello
+//hello
+
+
+
+
+
+
+
+
+//let m = "welcome";
+//console.log(m)
+//m = m + "home"
+//console.log(m)
+
+
+
+
+
+//console.log(10+20)
+//console.log("10" + "20")
+//console.log("10" + 20)
+//console.log(10 + "20" + 5)
+//console.log(10 + 5 + "20")
+//
+//30
+//1020
+//1020
+//10205
+//1520
+
+
+
+
+
+
+
+
+//console.log("20" - 5)
+//console.log("20" * 5)
+//console.log("20" / 5)
+//console.log("abc" - 5)
+//console.log("xyz" * 5)
+//
+//15
+//100
+//4
+//NaN
+//NaN
+
+
+
+
+
+
+//converting values into string
+
+//console.log(String(100))
+//console.log(String(true))
+//console.log(typeof (String(100)))
+//console.log(typeof (String(true)))
+//100
+//true
+//string
+//string
+
+
+
+
+
+
+
+
+//console.log("hello" == "hello")
+//console.log("hello" === "hello")
+//console.log("10" == 10)
+//console.log("10" === 10)
+//true
+//true
+//true
+//false
+
+
+
+
+
+
+//console.log("abc" < "bcd")
+//console.log("bcd" < "abc")
+//true
+//false
+
+
+
+
+
+
+// boolean datatype
+
+//let a = true
+//let b = "true"
+//console.log(typeof a)
+//console.log(typeof b)
+//boolean
+//string
+
+
+
+
+
+
+
+// falsy values and truthy values
+
+// console.log(Boolean(false))
+// console.log(Boolean(""))
+// console.log(Boolean("bhavna"))
+// console.log(Boolean(0))
+// console.log(Boolean(null))
+// console.log(Boolean(undefined))
+// console.log(Boolean([]))
+// console.log(Boolean({}))
+// console.log(!!"hello")
+// console.log(!!" ")
+// console.log(!!"")
+// console.log(!!0)
+// false
+// false
+// true
+// false
+// false
+// false
+// true
+// true
+// true
+// true
+// false
+// false
+
+
+
+
+
+
+
+
+// if else statements
+
+
+// let a = 10
+// let b = 20
+// let c = 30
+// 
+// if (a > b) {
+//     if (a > c) {
+//         console.log("a is greater")
+//     }
+//     else {
+//         console.log("c is greater")
+//     }
+// }
+// else {
+//     if (b > c) {
+//         console.log("b is greater")
+//     }
+//     else {
+//         console.log("c is greater")
+//     }
+// }
 
 
 
@@ -581,3 +848,94 @@ console.log(Number.isInteger(25))
 
 
 
+
+
+
+
+// lader if else
+
+//let x = 10
+//let y = 20
+//let z = 30
+
+//if (a>b  && a>c){
+//    console.log("a is greater")
+//}
+//else if(b>c){
+//    console.log("b is greater")
+//}
+//else{
+//    console.log("c is greater")
+//}
+
+
+
+
+
+
+
+
+// increment and decrement 
+
+// a = 10
+// console.log(a)
+// ++a
+// console.log(a)
+// b = 10
+// console.log(b)
+// b++
+// console.log(b)
+// 10
+// 11
+// 10
+// 11
+
+
+
+
+
+// let  a = 10
+// let y = ++a
+// console.log(a)
+// console.log(y)
+// 11
+// 11
+
+
+
+
+
+// let a = 10
+// let y = a++
+// console.log(a)
+// console.log(y)
+// 11
+// 10
+
+
+
+
+
+
+
+// let a = 10
+// let y = --a
+// console.log(a)
+// console.log(y)
+// 9
+// 9
+
+
+
+
+
+
+
+
+
+// let a = 10
+// let y = a--
+// console.log(a)
+// console.log(y)
+// 9
+// 10
