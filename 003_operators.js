@@ -170,3 +170,124 @@ console.log(arr1 ?. [0])
 
 
 
+
+
+
+
+// == loose equality
+
+//  console.log(10 == 10)
+//  console.log(10 == 5)
+//  console.log(10 == "10")
+//  console.log(0 == false)
+//  console.log(1 == true)
+//  console.log(null == undefined)
+//  
+//  true
+//  false
+//  true
+//  true
+//  true
+//  true
+
+
+
+
+
+
+
+
+
+// === strict equality
+
+// console.log(10 === 10)              // false
+// console.log(10 === 5)               // false
+// console.log(10 === "10")            // false
+// console.log(0 === false)            // false
+// console.log(1 === true)             // false
+// console.log(null === undefined)     // false
+// console.log(typeof null)            // object
+// console.log(typeof undefined)       // undefined
+
+
+
+
+
+
+
+//  let x = [23]
+//  let y = [23]
+//  console.log(x == y)      // false
+//  console.log(x === y)     // false
+//  let z = y
+//  console.log(y == z)      // true
+
+
+
+
+
+
+//  let x = 10
+//  let y = 5
+//  console.log(x != y)     // true
+
+
+
+
+
+
+
+//  let x = 10
+//  let y = 10
+//  console.log(x != y)          // false
+
+
+
+
+
+
+//    let x = 10
+//    let y = "10"
+//    console.log(x != y)     // false
+
+
+
+
+
+//   let x = 10
+//   let y = 10
+//   console.log(x !== y)     // false
+
+
+
+
+
+//   console.log(0 != false)   // false
+//   console.log(0 !== false)  // true
+
+
+
+
+
+// typeof operator
+
+//   console.log(typeof 100)
+//   console.log(typeof 10.5)
+//   console.log(typeof "100")
+//   console.log(typeof undefined)
+//   console.log(typeof null)
+//   console.log(typeof 10n)
+//   console.log(typeof {})
+//   console.log(typeof [])
+//   console.log(typeof function(){})
+
+
+
+
+
+
+
+
+
+
+
