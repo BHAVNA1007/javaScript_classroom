@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="course">java</h2>
+    <h2 class="course">python</h2>
+    <h2 class="course">react</h2>
+
+
+
+    <h1 class="course2">c2</h1>
+    <h1 class="course2">c2</h1>
+    <h1 class="course2">c2</h1>
+
+
+
+
+
+    <p class="para">hello</p>
+    <p class="para">kaise ho</p>
+    <p class="para">bdiya h ji...</p>
+
+    <script>
+        let clist = document.querySelectorAll(".course2")
+        console.log(clist)
+        console.log(clist[0].textContent)
+    </script>
+
+
+    
+    <script>
+        let paras = document.querySelectorAll(".para")
+        paras.forEach(function(e){
+            console.log(e.textContent)
+        })
+    </script>
+
+
+    <!-- <script>
+        let elements = document.querySelectorAll(".course");
+        elements.forEach(function(e){
+            e.style.color = "blue"
+            e.style.fontSize = "60px"
+            e.style.backgroundColor = "yellow"
+        })
+    </script> -->
+
+
+
+    <script>
+        let elements = document.querySelectorAll(".course");
+        for(let i = 0; i<elements.length; i++){
+             console.log(elements[i].textContent)
+        }
+    </script>
+</body>
+</html>
