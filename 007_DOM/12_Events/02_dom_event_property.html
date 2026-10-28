@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<!-- onload  property -->
+<body  onload="pageload()">
+
+    <!-- <button id = "b1"> Click Here</button>
+    <script>
+        let btn = document.getElementById("b1")
+        btn.onclick = function(){
+            alert("button cliked")
+        }
+    </script> -->
+
+
+
+    <!-- <button onclick="display()">Click Here</button>
+    <script>
+        function display(){
+            alert("clicked")
+        } 
+    </script> -->
+
+
+
+
+    <!-- onclick property-->
+    <p id="dt">Click button to see system date</p>
+    <button onclick="display()">Click here</button>
+   
+
+      
+     <!-- ondblclick property-->
+    <p id="dt1">doubleClick button to see system date</p>
+    <button ondblclick="display1()">Click here</button>
+
+     <!--for onload -->
+    <p> Refresh the page and check</p>
+
+
+
+    <img src="demo.jpg"  width="200px" height="300px" alt="image not found"  onerror="myimageerror()"  onload="myimage()">
+
+
+    <script>
+
+        // function reffers to onclick
+        function display(){
+            document.getElementById("dt").innerHTML=Date()
+        }
+
+
+        //  for doubleclick function
+        function display1(){
+            document.getElementById("dt1").innerHTML=Date()
+        }
+
+        
+        //function reffers to onload
+        function pageload(){
+            alert("page loaded")
+        }
+
+
+
+        function myimageerror(){
+            alert("unable to load")
+        }
+
+        function  myimage(){
+            alert("image loaded")
+        }
+    </script>
+    
+</body>
+</html>

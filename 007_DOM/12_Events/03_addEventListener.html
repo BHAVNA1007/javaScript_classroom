@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- mouse events -->
+
+
+    <!-- <button id="bt1">Click mee!</button>
+    <script>
+        let b1 = document.getElementById("bt1")
+        b1.addEventListener("click", function(){
+            alert("button clicked!!!!!")
+        })
+    </script> -->
+
+
+
+    <div id="d1">
+        helloooo jiiiiiiiii
+    </div>
+
+    <script>
+
+        let b1 = document.getElementById("d1")
+
+        b1.addEventListener("mouseenter", function(){
+            b1.style.backgroundColor = "orange"
+            b1.textContent = "see magicccc"
+
+        })
+
+        b1.addEventListener("mouseleave", function(){
+            b1.style.backgroundColor = "blue"
+            b1.textContent = "hover here"
+        })
+
+
+        b1.addEventListener("dblclick", function(){
+            b1.style.backgroundColor = "green"
+            b1.textContent = "unlocked box"
+        })
+    </script>
+    
+</body>
+</html>
