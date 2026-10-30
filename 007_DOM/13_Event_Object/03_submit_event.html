@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   <form id="login">
+    <input id="username" placeholder="Enter user name">
+    <input id="password" type="password" placeholder="Enter password">
+    <button type="submit">Login</button>
+</form>
+
+<p id="result"></p>
+
+<script>
+    document.getElementById("login").addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        let uname = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        document.getElementById("result").textContent =
+            "Login form submitted for " + uname;
+    });
+</script>
+    
+</body>
+</html>
