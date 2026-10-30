@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .high{
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="heading">JAVA</h2>
+    <button id="b1">Add class</button>
+    <!-- <button id="b2">Remove class</button> -->
+
+
+
+    <!-- <script>
+
+        let h = document.getElementById("heading")
+        document.getElementById("b1").addEventListener("click", function(){
+            h.classList.add("high")
+        })
+
+        document.getElementById("b2").addEventListener("click", function(){
+            h.classList.remove("high")
+        })
+    </script> -->
+
+
+    <script>
+
+        let h = document.getElementById("heading")
+        document.getElementById("b1").addEventListener("click", function(){
+            h.classList.toggle("high")
+        })
+
+        
+    </script>
+    
+</body>
+</html>
