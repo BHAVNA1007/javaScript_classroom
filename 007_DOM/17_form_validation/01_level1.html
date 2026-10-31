@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> Registration form </h2>
+    
+    <form id="myform">
+
+        UserName: <input type="text" id="username">
+
+        <span id="error"></span>
+        <br>
+        <br>
+        <button type="submit"> Submit </button>
+
+    </form>
+
+    <p id="message"> </p>
+
+
+    <script>
+
+        let form = document.getElementById("myform")
+        let username = document.getElementById("username")
+        let error = document.getElementById("error")
+        let message = document.getElementById("message")
+
+        form.addEventListener("submit", function(){
+            event.preventDefault()
+            let name = username.value.trim()
+
+            if(name === "")
+            {
+                error.textContent = `Username is required`
+                message.textContent = ""
+
+            }
+            else if(name.length < 3){
+                error.textContent = "must content 3 characters"
+                message.textContent = ""
+            }
+            else{
+                error.textContent = ""
+                message.textContent = "form submitted"
+            }
+        })
+
+    </script>
+    
+</body>
+</html>
