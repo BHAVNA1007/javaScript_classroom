@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .high{
+            color: white;
+            background-color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul id="stulist"> </ul>
+
+    <script>
+        let students = ["deepika", "rashmika", "virat", "vaibhav"];
+        let slist = document.getElementById("stulist");
+
+        for (let s of students){
+            let student = document.createElement("li");
+            student.textContent = s
+            student.classList.add("high")
+            slist.appendChild(student)
+        }
+    </script>
+    
+</body>
+</html>

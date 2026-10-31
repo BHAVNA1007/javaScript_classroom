@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- using remove()
+    
+    <h2 id="heading">JAVA</h2>
+    <p id="message">This para will be remove </p>
+    <button id="removebtn">Remove</button>
+
+
+    <script>
+
+        let m = document.getElementById("message")
+        document.getElementById("removebtn").addEventListener("click", function(){
+            m.remove()
+        })
+    </script> -->
+
+    <!-- using removeChild() -->
+
+    
+
+    <div id="container">
+
+        <p id="message">This para remove by removeChild() method</p>
+    </div>
+    <button id="removebtn">Remove</button>
+
+    <script>
+        
+        let c = document.getElementById("container")
+        let m = document.getElementById("message")
+        document.getElementById("removebtn").addEventListener("click", function(){
+            c.removeChild(m)
+        })
+    </script>
+
+</body>
+</html>

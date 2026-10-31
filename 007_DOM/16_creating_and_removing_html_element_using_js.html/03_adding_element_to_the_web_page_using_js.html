@@ -1,0 +1,46 @@
+<!-- syntax: parentelement.appendChild(childname) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <div id="d"> </div>
+
+    <script>
+
+        let h = document.createElement("h2")
+        h.innerText = "welcome"
+        let d = document.getElementById("d")
+        d.appendChild(h)
+
+    </script> -->
+
+
+
+    <h2>JAVA</h2>
+    <button id="btn">ADD PARA</button>
+    <div id="d"> </div>
+
+
+    <script>
+
+        let b = document.getElementById("btn");
+        let d = document.getElementById("d");
+        b.addEventListener("click", function(){
+            let para = document.createElement("p");
+            para.innerText = `this para created dynamically`;
+            d.appendChild(para);
+            
+        })
+    </script>
+    
+</body>
+</html>
+
+

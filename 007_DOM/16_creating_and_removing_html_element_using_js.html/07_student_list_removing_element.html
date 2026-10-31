@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> Student list </h2>
+    <ul id="stulist"> </ul>
+
+
+    <script>
+
+        let s = ["deep", "rash", "virat"]
+        let slist = document.getElementById("stulist")
+
+        for(let student of s){
+            let li = document.createElement("li")
+            let removebtn = document.createElement("button")
+
+            li.textContent = student + " "
+            removebtn.textContent = "remove"
+            removebtn.addEventListener("click", function(){
+                li.remove()
+            })
+
+            li.appendChild(removebtn)
+            slist.appendChild(li)
+
+        }
+    </script>
+    
+</body>
+</html>

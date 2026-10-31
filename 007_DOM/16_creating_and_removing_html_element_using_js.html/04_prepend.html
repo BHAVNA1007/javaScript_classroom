@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul id="stulist">
+        <li>Deepika</li>
+        <li>Rashmika</li>
+    </ul>
+
+    <button id="addbtn">add students</button>
+
+    <script>
+
+        let slist = document.getElementById("stulist");
+        document.getElementById("addbtn").addEventListener("click", function(){
+            let student = document.createElement("li");
+            student.textContent = prompt("Enter student Name: ")
+            slist.prepend(student)
+        })
+        
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Basic calculator</h2>
+    <input type="number" id="num1" placeholder="Enter first number">
+    <br>
+    <input type="number" id="num2"  placeholder="Enter second number">
+    <br>
+    <button  onclick="add()">Addition(+)</button>
+    <button  onclick="sub()">Subtraction(-)</button>
+    <button  onclick="multiply()">Multiplication</button>
+    <button  onclick="divide()">Divide(/)</button>
+    <h3 id="result">  </h3>
+
+
+    <script>
+
+        function add(){
+
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = a+b
+
+        }
+        
+    </script>
+    
+</body>
+</html>
