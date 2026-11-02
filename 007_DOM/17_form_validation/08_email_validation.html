@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+</head>
+<body>
+
+    <form id="myform">
+
+        EMAIL:
+        <input type="text" id="email">
+        <span id="emailerror" style="color:red"></span>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+
+        let form = document.getElementById("myform");
+        let email = document.getElementById("email");
+        let emailerror = document.getElementById("emailerror");
+        let message = document.getElementById("message");
+
+
+        function validateemail() {
+
+            let mail = email.value.trim();
+
+            let emailpattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (mail === "") {
+                emailerror.textContent = "Email is required";
+                return false;
+            }
+
+            else if (!emailpattern.test(mail)) {
+                emailerror.textContent = "Please enter a valid email address";
+                return false;
+            }
+
+            else {
+                emailerror.textContent = "";
+                return true;
+            }
+
+        }
+
+
+        // Real-time validation
+
+        form.addEventListener("input", function () {
+
+            validateemail();
+            message.textContent = "";
+
+        });
+
+
+        // Form submission
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let isvalid = validateemail();
+
+            if (isvalid) {
+                message.textContent = "Form submitted successfully!";
+            }
+            else {
+                message.textContent = "Please enter a valid email.";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
