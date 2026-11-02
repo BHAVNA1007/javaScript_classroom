@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Number Validation</title>
+</head>
+<body>
+
+    <form id="myform">
+
+        MOBILE NUMBER:
+        <input type="text" id="mobile" maxlength="10">
+        <span id="mobileerror" style="color:red"></span>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+
+        let form = document.getElementById("myform");
+        let mobile = document.getElementById("mobile");
+        let mobileerror = document.getElementById("mobileerror");
+        let message = document.getElementById("message");
+
+
+        function validatemobile() {
+
+            let number = mobile.value.trim();
+
+            let mobilepattern = /^[6-9][0-9]{9}$/;
+
+            if (number === "") {
+                mobileerror.textContent = "Mobile number is required";
+                return false;
+            }
+
+            else if (!mobilepattern.test(number)) {
+                mobileerror.textContent = "Enter a valid 10-digit Indian mobile number";
+                return false;
+            }
+
+            else {
+                mobileerror.textContent = "";
+                return true;
+            }
+
+        }
+
+
+        // Real-time validation
+
+        form.addEventListener("input", function () {
+
+            validatemobile();
+            message.textContent = "";
+
+        });
+
+
+        // Form submission
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let isvalid = validatemobile();
+
+            if (isvalid) {
+                message.textContent = "Form submitted successfully!";
+            }
+            else {
+                message.textContent = "Please enter a valid mobile number.";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
