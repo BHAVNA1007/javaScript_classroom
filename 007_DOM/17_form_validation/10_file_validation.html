@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload Validation</title>
+</head>
+<body>
+
+    <form id="myform">
+
+        Upload File:
+        <input type="file" id="file">
+
+        <span id="fileerror" style="color:red"></span>
+
+        <br><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+
+        let form = document.getElementById("myform");
+        let file = document.getElementById("file");
+        let fileerror = document.getElementById("fileerror");
+        let message = document.getElementById("message");
+
+
+        function validatefile() {
+
+            let uploadedfile = file.files[0];
+
+            let allowed_extensions = ["jpg", "jpeg", "png", "pdf"];
+            let max_size = 2 * 1024 * 1024; // 2 MB
+
+            if (!uploadedfile) {
+                fileerror.textContent = "Please select a file";
+                return false;
+            }
+
+            let extension = uploadedfile.name.split(".").pop().toLowerCase();
+
+            if (!allowed_extensions.includes(extension)) {
+                fileerror.textContent = "Only JPG, JPEG, PNG and PDF files are allowed";
+                return false;
+            }
+
+            if (uploadedfile.size > max_size) {
+                fileerror.textContent = "File size must be less than 2 MB";
+                return false;
+            }
+
+            fileerror.textContent = "";
+            return true;
+
+        }
+
+
+        // Real-time validation
+
+        file.addEventListener("change", function () {
+
+            validatefile();
+            message.textContent = "";
+
+        });
+
+
+        // Form submission
+
+        form.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            let isvalid = validatefile();
+
+            if (isvalid) {
+                message.textContent = "File uploaded successfully!";
+            }
+            else {
+                message.textContent = "Please select a valid file.";
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
