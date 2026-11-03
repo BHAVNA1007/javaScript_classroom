@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>CheckBox validation </h2>
+
+    <form action="hello.html" id="myform">
+
+        <input type="checkbox" name="terms" id="terms" value="accepted"> i accept terms and conditions:
+        <br>
+        <span id="error">  </span>
+        <br><br>
+
+        <button id="submit"> Submit </button>
+
+    </form>
+
+    <script>
+
+        let form = document.getElementById("myform")
+        let error = document.getElementById("error")
+        let terms = document.getElementById("terms")
+
+
+        function validateterms(){
+
+            if (terms.checked === false){
+
+                error.textContent = "accept terms"
+                return false;
+            }
+            else{
+                error.textContent = ""
+                return true
+            }
+
+        }
+
+            form.addEventListener("submit", function(event){
+            let result = validateterms()
+            if (result === false){
+                event.preventDefault()
+            }
+        })
+        
+    </script>
+    
+</body>
+</html>
