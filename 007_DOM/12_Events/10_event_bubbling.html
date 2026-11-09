@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="gp">
+        <div id="p">
+            <button id="c">click me</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        document.getElementById("gp").addEventListener("click", function(e){
+            
+             console.log("gp")
+        })
+          
+           
+
+        document.getElementById("p").addEventListener("click", function(e){
+           
+            console.log("p")
+        })
+
+
+        document.getElementById("c").addEventListener("click", function(e){
+           
+            console.log("child")
+        });
+    </script>
+    
+</body>
+</html>
