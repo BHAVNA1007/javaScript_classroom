@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="parent">
+        <button id="b1">Button one</button>
+        <button id="b2">Button two</button>
+        <button id="b3">Button three</button>
+    </div>
+
+
+    <script>
+        document.getElementById("parent").addEventListener("click", function(event){
+            if(event.target.tagName === 'BUTTON'){
+                console.log(event.target.id)
+            }
+        })
+    </script>
+</body>
+</html>
