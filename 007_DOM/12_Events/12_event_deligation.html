@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="parent">
+        <button>Apple</button>
+        <button>bnanana</button>
+        <button>mango</button>
+    </div>
+
+   
+    
+
+    <!-- <script>
+        let buttons1 = document.querySelectorAll("button")
+        buttons1.forEach(function(button){
+            button.addEventListener("click", function(){
+                console.log(this.innerText)
+            })
+        })
+    </script> -->
+
+    <!-- But imagine you have 100 buttons. You are attaching 100 event listeners.
+     Can we handle all these buttons using just one event listener?
+     Yes! That's where event delegation comes in. -->
+
+
+     <!-- 3. Solve the same problem using event delegation
+      Instead of attaching listeners to three buttons, attach only one listener to their parent.
+     -->
+
+
+     <script>
+        document.getElementById("parent").addEventListener("click", function(event){
+            console.log(event.target.innerText)
+        })
+     </script>
+
+
+     <!-- The important point:
+     - event.target tells us that Mango was clicked.
+     - The parent receives the event because of bubbling.
+     - The parent listener handles the event.
+     This combination of event bubbling + parent event listener + identifying the clicked child is event delegation.
+      -->
+</body>
+</html>
