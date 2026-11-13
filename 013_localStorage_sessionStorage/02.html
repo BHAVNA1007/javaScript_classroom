@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+    
+    <input type="text" id="name" placeholder="Enter name">
+    
+    <input type="email" id="email" placeholder="Enter email">
+    
+    <button onclick="saveData()">Save</button>
+    
+    <h3 id="result"></h3>
+
+
+
+    <script>
+
+        // Save information
+        function saveData() {
+        
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+        
+            let user = {
+                name: name,
+                email: email
+            };
+        
+            sessionStorage.setItem(
+                "user",
+                JSON.stringify(user)
+            );
+        
+            displayData();
+        }
+        
+        // Display saved information
+        function displayData() {
+        
+            let data = sessionStorage.getItem("user");
+        
+            if (data !== null) {
+        
+                let user = JSON.parse(data);
+        
+                document.getElementById("name").value = user.name;
+                document.getElementById("email").value = user.email;
+        
+                document.getElementById("result").innerText =
+                    "Welcome " + user.name;
+            }
+        }
+        
+        // Restore information after refresh
+        displayData();
+
+
+    </script>
+    
+</body>
+</html>
