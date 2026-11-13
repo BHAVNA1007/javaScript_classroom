@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>local storage</h2>
+    <script>
+
+        console.log(localStorage);
+
+
+        // Local Storage methods     
+        // There are four main methods you must remember.
+
+        localStorage.setItem("username", "Bhavna");
+
+
+        let username = localStorage.getItem("username");
+        console.log(username);
+        //If the key does not exist, getItem() returns null.
+
+
+        localStorage.removeItem("username");
+        //Removes a particular key-value pair.
+
+        console.log(localStorage.getItem("username"));
+        //null
+
+
+
+        localStorage.clear();
+        // Removes all Local Storage entries for the current origin.
+
+
+
+        console.log(localStorage.length);
+        //Returns the total number of stored keys.
+
+
+
+
+        //Local Storage stores only strings
+        localStorage.setItem("age", 25);
+        let age = localStorage.getItem("age");
+
+        console.log(age);
+        console.log(typeof age);
+
+
+
+
+        // What happens if we try to store an object directly?
+        let user = {
+            name: "Bhawna",
+            age: 24
+        };
+
+        localStorage.setItem("user", user);
+
+        // This will not store the object properly. It converts the object into a string such as:
+        // [object Object]
+
+
+
+
+
+        // So how do we store objects and arrays?
+        // We use JSON.stringify() and JSON.parse().
+
+        // Before learning these, understand one thing:
+        // - JSON.stringify() converts a JavaScript object or array into a JSON string.
+        // - JSON.parse() converts a valid JSON string back into a JavaScript object or array.
+
+
+
+        let student = {
+            name: "Bhawna",
+            course: "MCA",
+            skills: ["Python", "JavaScript", "MySQL"]
+        };
+        
+        // Store object
+        localStorage.setItem(
+            "student",
+            JSON.stringify(student)
+        );
+        
+        // Retrieve object
+        let result = JSON.parse(
+            localStorage.getItem("student")
+        );
+        
+        console.log(result.name);
+        console.log(result.skills);
+    </script>
+</body>
+</html>
