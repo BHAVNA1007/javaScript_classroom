@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>window object</h2>
+
+    <script>
+
+        console.log(window);
+
+        console.log(window.document);
+        // Both are equivalent
+        console.log(document);
+
+
+        window.alert("Welcome to JavaScript!");
+
+        let result = confirm("Do you want to continue?");
+        console.log(result);
+
+        let username = prompt("Enter your name");
+        console.log(username);
+
+
+
+        setTimeout(function() {
+        console.log("Hello!");
+        }, 2000);
+
+
+        // setInterval(function() {
+        // console.log("Hello!");
+        // }, 2000);
+
+
+
+        console.log(window.innerWidth);
+        console.log(window.innerHeight);
+        console.log(window.location.href);
+        console.log(window.navigator.userAgent);
+
+
+
+       // 5. Window.location object
+       // This is extremely important.
+       
+       // It provides information about the current URL and allows navigation.
+        console.log(window.location.href);
+        console.log(window.location.hostname);
+        console.log(window.location.pathname);
+        console.log(window.location.protocol);
+        console.log(window.location.port);
+    </script>
+    
+</body>
+</html>
