@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #container{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #error{
+            color: red;
+        }
+
+        #perror{
+            color: red;
+        }
+
+         #reperror{
+            color: red;
+        }
+
+        #email_error{
+            color: red;
+        }
+
+        #doberror{
+            color: red;
+        }
+
+        #gen_error{
+            color: red;
+        }
+
+        #mobile_error{
+            color: red;
+        }
+        #message{
+            color: green;
+        }
+
+        #file_error{
+            color: red;
+        }
+
+
+        #myform{
+            border: 2px solid brown;
+            border-radius: 10px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+   <div id="container">
+    <h2>Registration form</h2>
+
+    <form id="myform">
+
+        <table>
+            <tr>
+                <td><label for="uname">USER NAME:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="text" id="uname"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="error"> </span></td>
+                
+            </tr>
+
+             <tr>
+                <td><label for="password">PASS WORD:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="password" id="password"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="perror"> </span></td>
+                
+            </tr>
+
+
+            <tr>
+                <td><label for="repassword">RE PASS WORD:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="password" id="repassword"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="reperror"> </span></td>
+                
+            </tr>
+
+
+            <tr>
+                <td><label for="email">EMAIL ID:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="email" id="email"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="email_error"> </span></td>
+                
+            </tr>
+
+
+             <tr>
+                <td><label for="mobile">MOBILE NO:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="text" id="mobile"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="mobile_error"> </span></td>
+                
+            </tr>
+
+
+
+
+            <tr>
+                <td><label for="dob">DATE OF BIRTH:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="date" id="dob"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="doberror"> </span></td>
+                
+            </tr>
+
+
+            <tr>
+                <td><label>GENDER:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="radio" name="gender" value="male">MALE</td>
+                
+            </tr>
+             <tr>
+                <td><input type="radio" name="gender" value="female">FEMALE</td>
+                
+            </tr>
+            <tr>
+                <td><span id="gen_error"> </span></td>
+                
+            </tr>
+
+
+             <tr>
+                <td><label for="file">UPLOAD RESUME:</label></td>
+                
+            </tr>
+            <tr>
+                <td><input type="file" id="file"></td>
+                
+            </tr>
+            <tr>
+                <td><span id="file_error"> </span></td>
+                
+            </tr>
+
+            <tr>
+                <td><button type="submit">Submit</button></td>
+                
+            </tr>
+        </table>
+    </form>
+
+    <p id="message">   </p>
+    </div>
+
+
+    <script>
+
+         let form = document.getElementById("myform")
+         let username = document.getElementById("uname")
+         let error = document.getElementById("error")
+         let message = document.getElementById("message")
+
+         let password = document.getElementById("password")
+         let perror = document.getElementById("perror")
+
+
+         let repassword = document.getElementById("repassword")
+         let reperror = document.getElementById("reperror")
+
+         let dob = document.getElementById("dob")
+         let doberror = document.getElementById("doberror")
+
+         let gender = document.getElementsByName("gender")
+         let gen_error = document.getElementById("gen_error")
+
+         let email = document.getElementById("email")
+         let email_error = document.getElementById("email_error")
+
+         let mobile = document.getElementById("mobile")
+         let mobile_error = document.getElementById("mobile_error")
+
+
+
+         let file = document.getElementById("file")
+         let file_error = document.getElementById("file_error")
+
+
+         function validateusername(){
+
+            let name = username.value.trim()
+            if (name === ""){
+                error.textContent = `username required`
+                return false
+            }
+            else if (name.length < 3){
+                error.textContent = `username must content 3 characters`
+                return false
+            }
+
+            else{
+                error.textContent = ""
+                return true
+            }
+
+        }
+
+       
+        function validatepassword(){
+
+
+
+            let pass = password.value.trim()
+
+            let has_digit = false
+            let has_lower = false
+            let has_uper = false
+            let has_special = false
+
+            if(pass === ""){
+                perror.textContent =`password req`
+                return false
+            }
+
+            else if(pass.length < 8){
+                perror.textContent =`must contain 8 char`
+                return false
+            }
+            else if(pass.length > 15){
+                perror.textContent = `can not exeed 15 char`
+                return false
+            }
+
+            for (let i = 0; i< pass.length; i++){
+
+                if(ch >'A' && ch < 'Z'){
+                    has_uper = true
+                }
+                else if(ch > 'a' && ch < 'z'){
+                    has_lower = true
+                }
+                else if(ch > '0' && ch < '9'){
+                    has_digit = true
+                }
+                else if(ch != " "){
+                    has_special = true 
+                }
+    
+            }
+
+
+            if(!has_uper){
+                perror.textContent = `one upper req`
+                return false
+            }
+            if(!has_lower){
+                perror.textContent = `one lower req`
+                return false
+            }
+            if(!has_digit){
+                perror.textContent = `one digit req`
+                return false
+            }
+            if(!has_special){
+                perror.textContent = `one special req`
+                return false
+            }
+
+            perror.textContent =""
+            return true
+
+        }
+
+
+        function repasswordvalidate(){
+            let repass = repassword.value.trim()
+            if (repass === ""){
+                reperror.textContent = `enter repassword`
+                return false
+            }
+            else if(pass != repass){
+                reperror.textContent = `password does not match`
+                return false
+            }
+            else{
+                reperror.textContent =""
+                return true
+            }
+        }
+
+
+        function dobvalidation(){
+            let dob_value = dob.value
+            if (dob_value === ""){
+
+                doberror.textContent = `dob req`
+                return false
+            }
+
+            let birth_date = new Date(dob_value)
+            let today = new Date()
+
+            if (birth_date > today){
+                doberror.textContent =`future date is not allowed`
+                return false
+            }
+            doberror.textContent = ""
+            return true;
+
+        }
+
+
+        function gendervalidation(){
+            let selected = false
+            for (let i=0; i<gender.length; i++){
+
+                if(gender[i].checked){
+                    selected = true
+                    break
+                }
+            }
+
+
+            if(selected === false){
+                gen_error.textContent =`please select gender`
+                return false
+            }
+            else{
+                gen_error.textContent = ""
+                return true
+            }
+        }
+
+        function emailValidation(){
+            let mail = email.value.trim()
+
+            let mail_pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if (mail === ""){
+                email_error.textContent = `email req`
+                return false
+            }
+
+            else if (!mail_pattern.test(mail)){
+                email_error.textContent = `please enater valid email id`
+                return false
+            }
+
+            else{
+                email_error.textContent =""
+                return true;
+            }
+
+        }
+
+
+
+        function mobileValidation(){
+            let mob_num = mobile.value.trim();
+
+            let mob_pattern = /^[6-9][0-9]{9}$/
+
+            if(mob_num === ""){
+                mobile_error.textContent = "mobile number req"
+                return false
+            }
+            else if(!mob_pattern.test(mob_num)){
+                mobile_error.textContent = `enater 10 valid digit mobile number`
+                return false
+            }
+            else {
+                mobile_error.textContent = ""
+                return true
+            }
+        }
+
+
+
+        function fileValidation(){
+
+            let allowed_ext = ["jpg", "jpeg", "png", "pdf"]
+            let uploadfile = file.files[0]
+            let max_size = 2* 1024* 1024 // 2mb
+
+            if(!uploadfile){
+                file_error.textContent = `resume req`
+                return false
+            }
+
+            let ext = uploadfile.name.split(".").pop().toLowerCase();
+
+            if(!allowed_ext.includes(ext)){
+                file_error.textContent = `only listed ext allwed`
+                return false
+            }
+
+            file_error.textContent = ""
+            return true
+
+        }
+
+
+
+
+        username.addEventListener("input", function(){
+            validateusername()
+        })
+
+
+        password.addEventListener("input", function(){
+            validatepassword()
+        })
+
+        repassword.addEventListener("input", function(){
+            repasswordvalidate()
+        }) 
+
+        dob.addEventListener("input", function(){
+            dobvalidation()
+        })
+
+        email.addEventListener("input", function(){
+            emailValidation()
+        })
+
+        mobile.addEventListener("input", function(){
+            mobileValidation()
+        })
+        
+
+        file.addEventListener("change", function(){
+            fileValidation()
+        })
+        
+
+
+        form.addEventListener("submit", function(event){
+
+          
+            let isvalid = validateusername()
+            let passvalidate = validatepassword()
+            let repassword = repasswordvalidate()
+            let dob_res = dobvalidation()
+            let gen_valid = gendervalidation()
+            let mail_valid = emailValidation()
+            let mob_valid = mobileValidation()
+            let file_valid = fileValidation()
+
+            if (!isvalid  || !passvalidate  || !repassword || dob_res == false  || gen_valid === false ||  !mail_valid  || !mob_valid || !file_valid){
+               
+                event.preventDefault()
+            }
+        })
+    </script>
+    
+</body>
+</html>
